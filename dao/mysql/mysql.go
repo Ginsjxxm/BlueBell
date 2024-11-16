@@ -1,21 +1,21 @@
 package mysql
 
 import (
+	"BlueBell/settings"
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
-	"github.com/spf13/viper"
 )
 
 var db *sqlx.DB
 
-func Init() (err error) {
+func Init(ctg *settings.MySQLConfig) (err error) {
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8&parseTime=True&loc=Local",
-		viper.Get("mysql.user"),
-		viper.Get("mysql.password"),
-		viper.Get("mysql.host"),
-		viper.Get("mysql.port"),
-		viper.Get("mysql.dbname"),
+		ctg.User,
+		ctg.Password,
+		ctg.Host,
+		ctg.Port,
+		ctg.DB,
 	)
 	db, err := sqlx.Connect("mysql", dsn)
 	if err != nil {
@@ -23,8 +23,8 @@ func Init() (err error) {
 		return
 	}
 
-	db.SetMaxIdleConns(viper.GetInt("mysql.max_idle"))
-	db.SetMaxOpenConns(viper.GetInt("mysql.max_open"))
+	db.SetMaxIdleConns(ctg.MaxIdleConns)
+	db.SetMaxOpenConns(ctg.MaxOpenConns)
 
 	return
 }

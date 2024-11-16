@@ -1,3 +1,24 @@
-{"level":"INFO","time":"2024-11-16T00:03:46.895+0800","caller":"Qukuai/main.go:32","msg":"logger init success"}
-{"level":"INFO","time":"2024-11-16T00:04:07.294+0800","caller":"Qukuai/main.go:65","msg":"Shutdown Server ..."}
-{"level":"INFO","time":"2024-11-16T00:04:07.295+0800","caller":"Qukuai/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-16T14:09:05.276+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-16T14:49:04.648+0800","caller":"Qukuai/main.go:67","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-16T14:49:04.648+0800","caller":"Qukuai/main.go:77","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-16T14:49:05.529+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-16T14:49:09.561+0800","caller":"Qukuai/main.go:67","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-16T14:49:09.562+0800","caller":"Qukuai/main.go:77","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-16T15:43:06.156+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-16T15:44:18.085+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-16T15:45:02.064+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-16T15:46:33.566+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-16T15:46:48.703+0800","caller":"Qukuai/main.go:73","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-16T15:46:48.703+0800","caller":"Qukuai/main.go:82","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-16T15:46:49.498+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-16T15:46:57.216+0800","caller":"Qukuai/main.go:73","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-16T15:46:57.216+0800","caller":"Qukuai/main.go:82","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-16T15:46:58.002+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-16T15:47:04.826+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-16T15:47:10.427+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-16T15:47:26.328+0800","caller":"Qukuai/main.go:73","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-16T15:47:26.328+0800","caller":"Qukuai/main.go:82","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-16T15:47:27.775+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-16T15:47:45.428+0800","caller":"Qukuai/main.go:73","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-16T15:47:45.428+0800","caller":"Qukuai/main.go:82","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-16T15:47:46.824+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}

@@ -1,6 +1,7 @@
 package logger
 
 import (
+	"BlueBell/settings"
 	"github.com/gin-gonic/gin"
 	"github.com/natefinch/lumberjack"
 	"github.com/spf13/viper"
@@ -17,12 +18,12 @@ import (
 
 var logger *zap.Logger
 
-func Init() (err error) {
+func Init(ctg *settings.LogConfig) (err error) {
 	writeSyncer := getLogWriter(
-		viper.GetString("log.filename"),
-		viper.GetInt("log.max_size"),
-		viper.GetInt("log.max_backups"),
-		viper.GetInt("log.max_age"),
+		ctg.Filename,
+		ctg.MaxSize,
+		ctg.MaxBackups,
+		ctg.MaxAge,
 	)
 	encoder := getEncoder()
 	l := new(zapcore.Level)

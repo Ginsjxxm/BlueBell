@@ -1,22 +1,22 @@
 package redis
 
 import (
+	"BlueBell/settings"
 	"context"
 	"fmt"
 	"github.com/go-redis/redis/v8"
-	"github.com/spf13/viper"
 )
 
 var rdb *redis.Client
 
-func Init() (err error) {
+func Init(ctg *settings.RedisConfig) (err error) {
 	rdb := redis.NewClient(&redis.Options{
 		Addr: fmt.Sprintf("%s:%d",
-			viper.Get("redis.host"),
-			viper.GetInt("redis.port"),
+			ctg.Host,
+			ctg.Port,
 		),
-		Password: viper.GetString("redis.password"),
-		DB:       viper.GetInt("redis.db"),
+		Password: ctg.Password,
+		DB:       ctg.DB,
 	})
 	_, err = rdb.Ping(context.Background()).Result()
 	if err != nil {
