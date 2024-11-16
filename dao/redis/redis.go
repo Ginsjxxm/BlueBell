@@ -25,3 +25,9 @@ func Init() (err error) {
 	return nil
 
 }
+
+func Close() {
+	if rdb != nil {
+		rdb.Close()
+	}
+}

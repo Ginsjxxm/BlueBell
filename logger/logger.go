@@ -15,6 +15,8 @@ import (
 	"time"
 )
 
+var logger *zap.Logger
+
 func Init() (err error) {
 	writeSyncer := getLogWriter(
 		viper.GetString("log.filename"),
@@ -29,8 +31,8 @@ func Init() (err error) {
 		return err
 	}
 	core := zapcore.NewCore(encoder, writeSyncer, l)
-	Logger := zap.New(core, zap.AddCaller())
-	zap.ReplaceGlobals(Logger)
+	logger = zap.New(core, zap.AddCaller())
+	zap.ReplaceGlobals(logger)
 	return
 }
 

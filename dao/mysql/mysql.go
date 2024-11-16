@@ -28,3 +28,9 @@ func Init() (err error) {
 
 	return
 }
+
+func Close() {
+	if db != nil {
+		db.Close()
+	}
+}
