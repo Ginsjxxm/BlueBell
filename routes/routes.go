@@ -1,6 +1,7 @@
 package routers
 
 import (
+	"BlueBell/controller"
 	"BlueBell/logger"
 	"github.com/gin-gonic/gin"
 	"net/http"
@@ -9,9 +10,11 @@ import (
 func SetupRouter() *gin.Engine {
 	r := gin.New()
 	r.Use(logger.GinLogger(), logger.GinRecovery(true))
-
-	r.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, "Hello World")
+	r.POST("/SignUp", controller.SignUpHandler)
+	r.GET("/", func(context *gin.Context) {
+		context.JSON(http.StatusOK, gin.H{
+			"msg": "success",
+		})
 	})
 	return r
 }

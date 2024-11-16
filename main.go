@@ -1,6 +1,7 @@
 package main
 
 import (
+	"BlueBell/controller"
 	"BlueBell/dao/mysql"
 	"BlueBell/dao/redis"
 	"BlueBell/logger"
@@ -9,7 +10,6 @@ import (
 	"BlueBell/settings"
 	"context"
 	"fmt"
-	"github.com/spf13/viper"
 	"go.uber.org/zap"
 	"log"
 	"net/http"
@@ -52,12 +52,17 @@ func main() {
 		fmt.Println("init snowflake failed,err:", err)
 		return
 	}
+	//validator验证
+	if err := controller.InitTrans("zh"); err != nil {
+		fmt.Println("init trans failed,err:", err)
+		return
+	}
 
 	//注册路由
 	r := routers.SetupRouter()
 
 	srv := &http.Server{
-		Addr:    fmt.Sprintf(":%d", viper.GetInt("app.port")),
+		Addr:    fmt.Sprintf(":%d", settings.Conf.Port),
 		Handler: r,
 	}
 

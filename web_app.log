@@ -1,24 +1,69 @@
-{"level":"INFO","time":"2024-11-16T14:09:05.276+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
-{"level":"INFO","time":"2024-11-16T14:49:04.648+0800","caller":"Qukuai/main.go:67","msg":"Shutdown Server ..."}
-{"level":"INFO","time":"2024-11-16T14:49:04.648+0800","caller":"Qukuai/main.go:77","msg":"Server exiting"}
-{"level":"INFO","time":"2024-11-16T14:49:05.529+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
-{"level":"INFO","time":"2024-11-16T14:49:09.561+0800","caller":"Qukuai/main.go:67","msg":"Shutdown Server ..."}
-{"level":"INFO","time":"2024-11-16T14:49:09.562+0800","caller":"Qukuai/main.go:77","msg":"Server exiting"}
-{"level":"INFO","time":"2024-11-16T15:43:06.156+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
-{"level":"INFO","time":"2024-11-16T15:44:18.085+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
-{"level":"INFO","time":"2024-11-16T15:45:02.064+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
-{"level":"INFO","time":"2024-11-16T15:46:33.566+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
-{"level":"INFO","time":"2024-11-16T15:46:48.703+0800","caller":"Qukuai/main.go:73","msg":"Shutdown Server ..."}
-{"level":"INFO","time":"2024-11-16T15:46:48.703+0800","caller":"Qukuai/main.go:82","msg":"Server exiting"}
-{"level":"INFO","time":"2024-11-16T15:46:49.498+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
-{"level":"INFO","time":"2024-11-16T15:46:57.216+0800","caller":"Qukuai/main.go:73","msg":"Shutdown Server ..."}
-{"level":"INFO","time":"2024-11-16T15:46:57.216+0800","caller":"Qukuai/main.go:82","msg":"Server exiting"}
-{"level":"INFO","time":"2024-11-16T15:46:58.002+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
-{"level":"INFO","time":"2024-11-16T15:47:04.826+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
-{"level":"INFO","time":"2024-11-16T15:47:10.427+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
-{"level":"INFO","time":"2024-11-16T15:47:26.328+0800","caller":"Qukuai/main.go:73","msg":"Shutdown Server ..."}
-{"level":"INFO","time":"2024-11-16T15:47:26.328+0800","caller":"Qukuai/main.go:82","msg":"Server exiting"}
-{"level":"INFO","time":"2024-11-16T15:47:27.775+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
-{"level":"INFO","time":"2024-11-16T15:47:45.428+0800","caller":"Qukuai/main.go:73","msg":"Shutdown Server ..."}
-{"level":"INFO","time":"2024-11-16T15:47:45.428+0800","caller":"Qukuai/main.go:82","msg":"Server exiting"}
-{"level":"INFO","time":"2024-11-16T15:47:46.824+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-16T17:32:51.790+0800","caller":"Qukuai/main.go:72","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-16T17:32:51.790+0800","caller":"Qukuai/main.go:81","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-16T17:32:53.853+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-16T17:32:57.760+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"ERROR","time":"2024-11-16T17:33:06.043+0800","caller":"controller/user.go:16","msg":"SignUp with invalid param","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2024-11-16T17:33:06.043+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"ERROR","time":"2024-11-16T17:33:14.632+0800","caller":"controller/user.go:16","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2024-11-16T17:33:14.632+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"1.0082ms"}
+{"level":"INFO","time":"2024-11-16T17:36:07.797+0800","caller":"Qukuai/main.go:78","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-16T17:36:07.798+0800","caller":"Qukuai/main.go:87","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-16T17:36:08.675+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
+{"level":"ERROR","time":"2024-11-16T17:36:13.878+0800","caller":"controller/user.go:16","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2024-11-16T17:36:13.878+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"ERROR","time":"2024-11-16T17:36:16.250+0800","caller":"controller/user.go:16","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2024-11-16T17:36:16.250+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"INFO","time":"2024-11-16T17:37:01.646+0800","caller":"Qukuai/main.go:78","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-16T17:37:01.647+0800","caller":"Qukuai/main.go:87","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-16T17:37:03.315+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
+{"level":"ERROR","time":"2024-11-16T17:37:05.243+0800","caller":"controller/user.go:16","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2024-11-16T17:37:05.243+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"ERROR","time":"2024-11-16T17:37:06.226+0800","caller":"controller/user.go:16","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2024-11-16T17:37:06.226+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"INFO","time":"2024-11-16T17:38:29.446+0800","caller":"Qukuai/main.go:78","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-16T17:38:29.446+0800","caller":"Qukuai/main.go:87","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-16T17:38:31.173+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
+{"level":"ERROR","time":"2024-11-16T17:38:33.461+0800","caller":"controller/user.go:16","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2024-11-16T17:38:33.461+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"495.9µs"}
+{"level":"ERROR","time":"2024-11-16T17:40:24.867+0800","caller":"controller/user.go:16","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2024-11-16T17:40:24.867+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"496.5µs"}
+{"level":"ERROR","time":"2024-11-16T17:40:26.210+0800","caller":"controller/user.go:16","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2024-11-16T17:40:26.210+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"ERROR","time":"2024-11-16T17:40:42.152+0800","caller":"controller/user.go:16","msg":"SignUp with invalid param","error":"invalid character '\"' after object key:value pair"}
+{"level":"INFO","time":"2024-11-16T17:40:42.152+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"ERROR","time":"2024-11-16T17:40:47.696+0800","caller":"controller/user.go:16","msg":"SignUp with invalid param","error":"invalid character '\"' after object key:value pair"}
+{"level":"INFO","time":"2024-11-16T17:40:47.696+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"ERROR","time":"2024-11-16T17:40:51.096+0800","caller":"controller/user.go:16","msg":"SignUp with invalid param","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2024-11-16T17:40:51.096+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"ERROR","time":"2024-11-16T17:40:54.894+0800","caller":"controller/user.go:16","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2024-11-16T17:40:54.894+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"ERROR","time":"2024-11-16T17:41:34.438+0800","caller":"controller/user.go:16","msg":"SignUp with invalid param","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2024-11-16T17:41:34.438+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"ERROR","time":"2024-11-16T17:41:37.972+0800","caller":"controller/user.go:16","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.Password' Error:Field validation for 'Password' failed on the 'required' tag\nKey: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2024-11-16T17:41:37.972+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"ERROR","time":"2024-11-16T17:42:03.543+0800","caller":"controller/user.go:16","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2024-11-16T17:42:03.544+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"1.0019ms"}
+{"level":"INFO","time":"2024-11-16T17:42:09.387+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"500.1µs"}
+{"level":"INFO","time":"2024-11-16T17:42:24.630+0800","caller":"Qukuai/main.go:78","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-16T17:42:24.630+0800","caller":"Qukuai/main.go:87","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-16T17:42:25.512+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-16T17:42:27.747+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"1.0034ms"}
+{"level":"INFO","time":"2024-11-16T17:43:34.686+0800","caller":"Qukuai/main.go:78","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-16T17:43:34.686+0800","caller":"Qukuai/main.go:87","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-16T17:43:36.366+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-16T17:43:37.575+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"ERROR","time":"2024-11-16T17:43:40.966+0800","caller":"controller/user.go:16","msg":"SignUp with invalid param","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2024-11-16T17:43:40.966+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"ERROR","time":"2024-11-16T17:43:45.523+0800","caller":"controller/user.go:16","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.rePassword' Error:Field validation for 'rePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2024-11-16T17:43:45.523+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"ERROR","time":"2024-11-16T17:43:55.879+0800","caller":"controller/user.go:16","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.password' Error:Field validation for 'password' failed on the 'required' tag"}
+{"level":"INFO","time":"2024-11-16T17:43:55.879+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"INFO","time":"2024-11-16T17:47:12.358+0800","caller":"Qukuai/main.go:78","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-16T17:47:12.358+0800","caller":"Qukuai/main.go:87","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-16T17:47:46.395+0800","caller":"Qukuai/main.go:33","msg":"logger init success"}
+{"level":"ERROR","time":"2024-11-16T17:47:48.223+0800","caller":"controller/user.go:17","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.password' Error:Field validation for 'password' failed on the 'required' tag"}
+{"level":"INFO","time":"2024-11-16T17:47:48.224+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"499.4µs"}
+{"level":"INFO","time":"2024-11-16T17:48:20.647+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"INFO","time":"2024-11-16T17:48:25.032+0800","caller":"logger/logger.go:69","msg":"/SignUp","status":200,"method":"POST","path":"/SignUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"INFO","time":"2024-11-16T17:48:28.621+0800","caller":"Qukuai/main.go:78","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-16T17:48:28.621+0800","caller":"Qukuai/main.go:87","msg":"Server exiting"}
