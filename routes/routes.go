@@ -7,11 +7,16 @@ import (
 	"net/http"
 )
 
-func SetupRouter() *gin.Engine {
+// SetupRouter 处理注册请求函数
+func SetupRouter(mode string) *gin.Engine {
+	if mode == gin.ReleaseMode {
+		gin.SetMode(gin.ReleaseMode)
+	}
 	r := gin.New()
 	r.Use(logger.GinLogger(), logger.GinRecovery(true))
 	r.POST("/SignUp", controller.SignUpHandler)
-	r.GET("/", func(context *gin.Context) {
+	r.POST("/Login", controller.LoginHandler)
+	r.GET("/ping", func(context *gin.Context) {
 		context.JSON(http.StatusOK, gin.H{
 			"msg": "success",
 		})

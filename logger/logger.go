@@ -18,7 +18,7 @@ import (
 
 var logger *zap.Logger
 
-func Init(ctg *settings.LogConfig) (err error) {
+func Init(ctg *settings.LogConfig, mode string) (err error) {
 	writeSyncer := getLogWriter(
 		ctg.Filename,
 		ctg.MaxSize,
@@ -31,7 +31,16 @@ func Init(ctg *settings.LogConfig) (err error) {
 	if err != nil {
 		return err
 	}
-	core := zapcore.NewCore(encoder, writeSyncer, l)
+	//日志输出到终端和文件
+	var core zapcore.Core
+	if mode == "dev" {
+		consoleEncoder := zapcore.NewConsoleEncoder(zap.NewDevelopmentEncoderConfig())
+		core = zapcore.NewTee(
+			zapcore.NewCore(encoder, writeSyncer, l),
+			zapcore.NewCore(consoleEncoder, zapcore.Lock(os.Stdout), zap.DebugLevel))
+	} else {
+		core = zapcore.NewCore(encoder, writeSyncer, l)
+	}
 	logger = zap.New(core, zap.AddCaller())
 	zap.ReplaceGlobals(logger)
 	return
