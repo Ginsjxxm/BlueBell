@@ -47,19 +47,18 @@ func encryptPassword(password string) string {
 	return hex.EncodeToString(h.Sum([]byte(password)))
 }
 
-func Login(p *models.User) (err error) {
-	oPassword := p.Password
-	password := p.Password
-	sqlStr := `select password from user where username=?`
-	err = db.Get(&password, sqlStr, p.Username)
+func Login(user *models.User) (err error) {
+	oPassword := user.Password
+	sqlStr := `select user_id ,username, password from user where username=?`
+	err = db.Get(user, sqlStr, user.Username)
 	if errors.Is(err, sql.ErrNoRows) {
 		return ErrorUserNotExist
 	}
 	if err != nil {
 		return err
 	}
-	oPassword = encryptPassword(oPassword)
-	if password != oPassword {
+	password := encryptPassword(oPassword)
+	if password != user.Password {
 		return ErrorInvalidPassword
 	}
 	return

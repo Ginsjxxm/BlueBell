@@ -13,7 +13,7 @@ import (
 
 // 处理gin输入前缀
 func removeTopStruct(fields map[string]string) map[string]string {
-	res := map[string]string{}
+	res := make(map[string]string)
 	for k, v := range fields {
 		res[k[strings.Index(k, ".")+1:]] = v
 	}
@@ -56,18 +56,19 @@ func LoginHandler(c *gin.Context) {
 		errs, ok := err.(validator.ValidationErrors)
 		if !ok {
 			ResponseError(c, CodeInvalidPassword)
+			return
 		}
 		ResponseErrorWithMsg(c, CodeInvalidPassword, removeTopStruct(errs.Translate(trans)))
 		return
 	}
 
 	//业务处理
-	err := logic.Login(p)
+	token, err := logic.Login(p)
 	if err != nil {
 		zap.L().Error("Login with invalid param", zap.String("username", p.Username), zap.Error(err))
 		ResponseError(c, CodeInvalidPassword)
 		return
 	}
 	//返回响应
-	ResponseSuccess(c, nil)
+	ResponseSuccess(c, token)
 }
