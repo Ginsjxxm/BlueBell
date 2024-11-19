@@ -672,3 +672,32 @@
 {"level":"INFO","time":"2024-11-19T19:48:07.475+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
 {"level":"INFO","time":"2024-11-19T19:50:45.247+0800","caller":"Qukuai/main.go:78","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2024-11-19T19:50:45.247+0800","caller":"Qukuai/main.go:87","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-19T19:57:35.089+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"ERROR","time":"2024-11-19T19:57:56.920+0800","caller":"controller/user.go:55","msg":"Login with invalid param","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2024-11-19T19:57:56.920+0800","caller":"logger/logger.go:78","msg":"/api/v1/Login","status":200,"method":"POST","path":"/api/v1/Login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"500µs"}
+{"level":"INFO","time":"2024-11-19T19:58:01.244+0800","caller":"logger/logger.go:78","msg":"/api/v1/Login","status":200,"method":"POST","path":"/api/v1/Login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"1.0017ms"}
+{"level":"INFO","time":"2024-11-19T20:07:33.350+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-19T20:07:36.475+0800","caller":"logger/logger.go:78","msg":"/api/v1/Login","status":200,"method":"POST","path":"/api/v1/Login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"506µs"}
+{"level":"INFO","time":"2024-11-19T20:07:51.602+0800","caller":"logger/logger.go:78","msg":"/api/v1/Login","status":200,"method":"POST","path":"/api/v1/Login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"351.9µs"}
+{"level":"INFO","time":"2024-11-19T20:08:44.908+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-19T20:08:46.303+0800","caller":"logger/logger.go:78","msg":"/api/v1/Login","status":200,"method":"POST","path":"/api/v1/Login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"898.2µs"}
+{"level":"INFO","time":"2024-11-19T20:08:47.216+0800","caller":"logger/logger.go:78","msg":"/api/v1/Login","status":200,"method":"POST","path":"/api/v1/Login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"523.8µs"}
+{"level":"INFO","time":"2024-11-19T20:08:48.331+0800","caller":"logger/logger.go:78","msg":"/api/v1/Login","status":200,"method":"POST","path":"/api/v1/Login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"357.6µs"}
+{"level":"INFO","time":"2024-11-19T20:08:49.386+0800","caller":"logger/logger.go:78","msg":"/api/v1/Login","status":200,"method":"POST","path":"/api/v1/Login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"319.7µs"}
+{"level":"INFO","time":"2024-11-19T20:08:50.363+0800","caller":"logger/logger.go:78","msg":"/api/v1/Login","status":200,"method":"POST","path":"/api/v1/Login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"287.7µs"}
+{"level":"INFO","time":"2024-11-19T20:09:37.366+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-19T20:09:38.955+0800","caller":"logger/logger.go:78","msg":"/api/v1/Login","status":200,"method":"POST","path":"/api/v1/Login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"917.8µs"}
+{"level":"INFO","time":"2024-11-19T20:10:12.439+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-19T20:11:58.480+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-19T20:12:00.082+0800","caller":"logger/logger.go:78","msg":"/api/v1/Login","status":200,"method":"POST","path":"/api/v1/Login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"996.6µs"}
+{"level":"INFO","time":"2024-11-19T20:12:19.627+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-19T20:13:16.567+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-19T20:13:18.414+0800","caller":"logger/logger.go:78","msg":"/api/v1/Login","status":200,"method":"POST","path":"/api/v1/Login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"1.4997ms"}
+{"level":"INFO","time":"2024-11-19T20:13:28.009+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"2.1699ms"}
+{"level":"INFO","time":"2024-11-19T20:14:02.169+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-19T20:14:03.644+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"1.4993ms"}
+{"level":"INFO","time":"2024-11-19T20:24:14.631+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-19T20:26:16.420+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-19T20:27:39.113+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-19T20:27:39.273+0800","caller":"Qukuai/main.go:78","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-19T20:27:39.273+0800","caller":"Qukuai/main.go:87","msg":"Server exiting"}
