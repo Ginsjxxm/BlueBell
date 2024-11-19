@@ -57,3 +57,30 @@ func GetHandlerPost(c *gin.Context) {
 
 	ResponseSuccess(c, data)
 }
+
+// GetPostListHandler 分页请求帖子
+func GetPostListHandler(c *gin.Context) {
+	//获取分页参数
+	var (
+		limit  int64
+		offset int64
+		err    error
+	)
+	offsetStr := c.Query("offset")
+	limitStr := c.Query("limit")
+	offset, err = strconv.ParseInt(offsetStr, 10, 64)
+	if err != nil {
+		offset = 0
+	}
+	limit, err = strconv.ParseInt(limitStr, 10, 64)
+	if err != nil {
+		limit = 5
+	}
+	data, err := logic.GetPostList(offset, limit)
+	if err != nil {
+		zap.L().Error("logic.GetPostList failed", zap.Error(err))
+		ResponseError(c, CodeServeBusy)
+		return
+	}
+	ResponseSuccess(c, data)
+}

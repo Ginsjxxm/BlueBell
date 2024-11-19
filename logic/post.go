@@ -36,5 +36,30 @@ func GetPostByID(pid int64) (data *models.ApiPostDetail, err error) {
 	data.Post = post
 	data.CommunityDetail = community
 	return
+}
 
+func GetPostList(offset int64, limit int64) (data []*models.ApiPostDetail, err error) {
+	data = make([]*models.ApiPostDetail, 0)
+	posts, err := mysql.GetPostList(offset, limit)
+	if err != nil {
+		return nil, err
+	}
+	for _, post := range posts {
+		user, err := mysql.GetUserByID(post.AuthorID)
+		if err != nil {
+			return nil, err
+		}
+		community, err := mysql.GetCommunityDetailByID(post.CommunityID)
+		if err != nil {
+			return nil, err
+		}
+		postDetail := &models.ApiPostDetail{
+			AuthorName:      user.Username,
+			Post:            post,
+			CommunityDetail: community,
+		}
+		data = append(data, postDetail)
+	}
+
+	return
 }

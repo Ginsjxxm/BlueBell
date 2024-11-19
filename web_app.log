@@ -613,3 +613,62 @@
 {"level":"INFO","time":"2024-11-19T18:59:58.674+0800","caller":"logger/logger.go:78","msg":"/api/v1/post/491836938387457","status":200,"method":"GET","path":"/api/v1/post/491836938387457","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"1.2303858s"}
 {"level":"INFO","time":"2024-11-19T18:59:58.690+0800","caller":"Qukuai/main.go:78","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2024-11-19T18:59:58.690+0800","caller":"Qukuai/main.go:87","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-19T19:09:41.450+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-19T19:09:47.467+0800","caller":"logger/logger.go:78","msg":"/api/v1/post/","status":200,"method":"GET","path":"/api/v1/post/","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"INFO","time":"2024-11-19T19:10:10.635+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"INFO","time":"2024-11-19T19:13:46.760+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-19T19:13:49.842+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"1.9954ms"}
+{"level":"INFO","time":"2024-11-19T19:14:08.720+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-19T19:14:09.698+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"499.3µs"}
+{"level":"INFO","time":"2024-11-19T19:20:48.124+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"POST","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"INFO","time":"2024-11-19T19:20:52.177+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"POST","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"0s"}
+{"level":"INFO","time":"2024-11-19T19:21:11.567+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-19T19:21:13.168+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"POST","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"2.7912ms"}
+{"level":"ERROR","time":"2024-11-19T19:21:17.970+0800","caller":"controller/post.go:65","msg":"logic.GetPostList failed","error":"无效的ID"}
+{"level":"INFO","time":"2024-11-19T19:21:17.970+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"995.6µs"}
+{"level":"ERROR","time":"2024-11-19T19:21:23.659+0800","caller":"controller/post.go:65","msg":"logic.GetPostList failed","error":"无效的ID"}
+{"level":"INFO","time":"2024-11-19T19:21:23.659+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"501.1µs"}
+{"level":"ERROR","time":"2024-11-19T19:21:24.682+0800","caller":"controller/post.go:65","msg":"logic.GetPostList failed","error":"无效的ID"}
+{"level":"INFO","time":"2024-11-19T19:21:24.682+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"1.0006ms"}
+{"level":"ERROR","time":"2024-11-19T19:21:26.386+0800","caller":"controller/post.go:65","msg":"logic.GetPostList failed","error":"无效的ID"}
+{"level":"INFO","time":"2024-11-19T19:21:26.386+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"1.0004ms"}
+{"level":"ERROR","time":"2024-11-19T19:22:32.190+0800","caller":"controller/post.go:65","msg":"logic.GetPostList failed","error":"无效的ID"}
+{"level":"INFO","time":"2024-11-19T19:22:32.190+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"1.2212ms"}
+{"level":"ERROR","time":"2024-11-19T19:23:26.468+0800","caller":"controller/post.go:65","msg":"logic.GetPostList failed","error":"无效的ID"}
+{"level":"INFO","time":"2024-11-19T19:23:26.468+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"2.4108ms"}
+{"level":"INFO","time":"2024-11-19T19:23:57.131+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"ERROR","time":"2024-11-19T19:23:58.390+0800","caller":"controller/post.go:65","msg":"logic.GetPostList failed","error":"无效的ID"}
+{"level":"INFO","time":"2024-11-19T19:23:58.391+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"999µs"}
+{"level":"INFO","time":"2024-11-19T19:24:04.789+0800","caller":"Qukuai/main.go:78","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-19T19:24:04.789+0800","caller":"Qukuai/main.go:87","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-19T19:24:10.004+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"ERROR","time":"2024-11-19T19:28:57.106+0800","caller":"controller/post.go:65","msg":"logic.GetPostList failed","error":"无效的ID"}
+{"level":"INFO","time":"2024-11-19T19:28:57.106+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"4m43.587733s"}
+{"level":"INFO","time":"2024-11-19T19:28:57.126+0800","caller":"Qukuai/main.go:78","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-19T19:28:57.126+0800","caller":"Qukuai/main.go:87","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-19T19:28:58.394+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"ERROR","time":"2024-11-19T19:29:06.914+0800","caller":"controller/post.go:65","msg":"logic.GetPostList failed","error":"无效的ID"}
+{"level":"INFO","time":"2024-11-19T19:29:06.914+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"3.0000606s"}
+{"level":"INFO","time":"2024-11-19T19:29:06.936+0800","caller":"Qukuai/main.go:78","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-19T19:29:06.936+0800","caller":"Qukuai/main.go:87","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-19T19:29:23.353+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"ERROR","time":"2024-11-19T19:29:29.766+0800","caller":"controller/post.go:65","msg":"logic.GetPostList failed","error":"无效的ID"}
+{"level":"INFO","time":"2024-11-19T19:29:29.766+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"1.411ms"}
+{"level":"INFO","time":"2024-11-19T19:29:41.478+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-19T19:29:44.800+0800","caller":"Qukuai/main.go:78","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-19T19:29:44.801+0800","caller":"Qukuai/main.go:87","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-19T19:29:50.654+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"ERROR","time":"2024-11-19T19:32:17.569+0800","caller":"controller/post.go:65","msg":"logic.GetPostList failed","error":"无效的ID"}
+{"level":"INFO","time":"2024-11-19T19:32:17.569+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"2m24.9319305s"}
+{"level":"INFO","time":"2024-11-19T19:32:17.591+0800","caller":"Qukuai/main.go:78","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-19T19:32:17.592+0800","caller":"Qukuai/main.go:87","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-19T19:32:19.256+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-19T19:32:26.514+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"1.994944s"}
+{"level":"INFO","time":"2024-11-19T19:32:26.529+0800","caller":"Qukuai/main.go:78","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-19T19:32:26.529+0800","caller":"Qukuai/main.go:87","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-19T19:45:45.500+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-19T19:46:20.980+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"offset=0&&limit=1","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"11.4991ms"}
+{"level":"INFO","time":"2024-11-19T19:46:26.525+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"offset=0&&limit=2","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":"1.0003ms"}
+{"level":"INFO","time":"2024-11-19T19:48:07.475+0800","caller":"Qukuai/main.go:34","msg":"logger init success"}
+{"level":"INFO","time":"2024-11-19T19:50:45.247+0800","caller":"Qukuai/main.go:78","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-19T19:50:45.247+0800","caller":"Qukuai/main.go:87","msg":"Server exiting"}
