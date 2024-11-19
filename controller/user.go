@@ -22,8 +22,8 @@ func removeTopStruct(fields map[string]string) map[string]string {
 
 func SignUpHandler(c *gin.Context) {
 	//参数校验
-	p := models.ParamSignUp{}
-	if err := c.ShouldBindJSON(&p); err != nil {
+	p := new(models.ParamSignUp)
+	if err := c.ShouldBindJSON(p); err != nil {
 		zap.L().Error("SignUp with invalid param", zap.Error(err))
 		errs, ok := err.(validator.ValidationErrors)
 		if !ok {
@@ -34,7 +34,7 @@ func SignUpHandler(c *gin.Context) {
 		return
 	}
 	//业务处理
-	err := logic.SignUp(&p)
+	err := logic.SignUp(p)
 	if err != nil {
 		zap.L().Error("logic.SignUp failed", zap.Error(err))
 		if errors.Is(err, mysql.ErrorUserExist) {
@@ -53,7 +53,8 @@ func LoginHandler(c *gin.Context) {
 	p := new(models.ParamLogin)
 	if err := c.ShouldBindJSON(p); err != nil {
 		zap.L().Error("Login with invalid param", zap.Error(err))
-		errs, ok := err.(validator.ValidationErrors)
+		var errs validator.ValidationErrors
+		ok := errors.As(err, &errs)
 		if !ok {
 			ResponseError(c, CodeInvalidPassword)
 			return

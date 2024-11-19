@@ -8,12 +8,6 @@ import (
 	"errors"
 )
 
-var (
-	ErrorUserNotExist    = errors.New("用户不存在")
-	ErrorInvalidPassword = errors.New("用户名或者密码错误")
-	ErrorUserExist       = errors.New("用户已存在")
-)
-
 // 盐
 const screty = "WANG_ZHANG"
 
@@ -59,7 +53,17 @@ func Login(user *models.User) (err error) {
 	}
 	password := encryptPassword(oPassword)
 	if password != user.Password {
-		return ErrorInvalidPassword
+		err = ErrorUserNotExist
+		return err
 	}
+	return
+}
+
+//根据id获取用户id
+
+func GetUserByID(id uint64) (user *models.User, err error) {
+	user = new(models.User)
+	sqlStr := `select user_id ,username from user where user_id = ?`
+	err = db.Get(user, sqlStr, id)
 	return
 }

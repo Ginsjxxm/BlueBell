@@ -12,6 +12,7 @@ const (
 
 	CodeInvalidToken
 	CodeNeedLogin
+	CodeInvalidByID
 )
 
 var codeMsgMap = map[ResCode]string{
@@ -23,6 +24,7 @@ var codeMsgMap = map[ResCode]string{
 	CodeServeBusy:       "服务繁忙",
 	CodeNeedLogin:       "需要登录",
 	CodeInvalidToken:    "无效的Token",
+	CodeInvalidByID:     "id不存在",
 }
 
 func (code ResCode) Msg() string {

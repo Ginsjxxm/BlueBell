@@ -4,6 +4,10 @@ port: 8081
 version: "v0.1.4"
 start_time: "2024-11-16 00:00:00"
 machine_id: 1
+
+
+auth:
+  jwt_expire: 8670
 log:
   level: "debug"
   filename: "web_app.log"
@@ -19,6 +23,6 @@ mysql:
   max_open: 200
   max_idle: 50
 redis:
-  host: 10.188.188.226
+  host: 10.188.190.198
   port: 6379
   db: 0

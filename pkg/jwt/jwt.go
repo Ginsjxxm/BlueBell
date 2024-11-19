@@ -3,10 +3,9 @@ package jwt
 import (
 	"errors"
 	"github.com/dgrijalva/jwt-go"
+	"github.com/spf13/viper"
 	"time"
 )
-
-const tokenExpireDuration = time.Hour * 24
 
 var mySecret = []byte("就这样被你征服")
 
@@ -21,7 +20,7 @@ func GenToken(userId uint64, username string) (string, error) {
 		UserId:   userId,
 		Username: username,
 		StandardClaims: jwt.StandardClaims{
-			ExpiresAt: time.Now().Add(tokenExpireDuration).Unix(),
+			ExpiresAt: time.Now().Add(time.Duration(viper.GetInt("auth.jwt_expire")) * time.Hour).Unix(),
 			Issuer:    "BlueBell",
 		},
 	}

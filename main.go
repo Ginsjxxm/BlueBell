@@ -9,6 +9,7 @@ import (
 	routers "BlueBell/routes"
 	"BlueBell/settings"
 	"context"
+	"errors"
 	"fmt"
 	"go.uber.org/zap"
 	"log"
@@ -31,9 +32,8 @@ func main() {
 		return
 	}
 	zap.L().Info("logger init success")
-	//异步加载入内存
+	//异步加载入内
 	defer zap.L().Sync()
-
 	//加载数据库
 	if err := mysql.Init(settings.Conf.MySQLConfig); err != nil {
 		fmt.Println("init setting failed,err:", err)
@@ -67,7 +67,7 @@ func main() {
 	}
 
 	go func() {
-		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+		if err := srv.ListenAndServe(); err != nil && !errors.Is(err, http.ErrServerClosed) {
 			log.Fatalf("listen: %s\n", err)
 		}
 	}()
@@ -78,7 +78,7 @@ func main() {
 	zap.L().Info("Shutdown Server ...")
 
 	// 创建上下文，设置超时
-	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second) // 设置超时时间为 10 秒
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second) // 设置超时时间为 5 秒
 	defer cancel()
 
 	if err := srv.Shutdown(ctx); err != nil {

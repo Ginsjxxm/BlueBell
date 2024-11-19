@@ -15,8 +15,20 @@ func SetupRouter(mode string) *gin.Engine {
 	}
 	r := gin.New()
 	r.Use(logger.GinLogger(), logger.GinRecovery(true))
-	r.POST("/SignUp", controller.SignUpHandler)
-	r.POST("/Login", controller.LoginHandler)
+
+	v1 := r.Group("/api/v1")
+	v1.POST("/SignUp", controller.SignUpHandler)
+	v1.POST("/Login", controller.LoginHandler)
+	v1.Use(middlewares.JWTAuthMiddleware())
+	{
+		v1.GET("/community", controller.CommunityHandler)
+		v1.GET("/community/:id", controller.CommunityDetailHandler)
+
+		v1.POST("/post", controller.CreatePostHandler)
+		v1.GET("/post/:id", controller.GetHandlerPost)
+	}
+
+	//test
 	r.GET("/ping", middlewares.JWTAuthMiddleware(), func(c *gin.Context) {
 		c.String(http.StatusOK, "pong")
 	})
