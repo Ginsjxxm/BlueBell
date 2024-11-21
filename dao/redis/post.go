@@ -48,12 +48,12 @@ func GetPostVoteData(ids []string) (data []int64, err error) {
 
 func GetCommunityPostIDByInOrder(p *models.ParamPostList) ([]string, error) {
 	ctx := context.Background()
-	orderkey := KeyPostTimeZSet       // 默认是时间
-	if p.Order == models.OrderScore { // 按照分数请求
+	orderkey := getRedisKey(KeyPostTimeZSet) // 默认是时间
+	if p.Order == models.OrderScore {        // 按照分数请求
 		orderkey = KeyPostScoreZSet
 	}
 	cKey := getRedisKey(KeyCommunitySetPF + strconv.Itoa(int(p.CommunityID)))
-	key := orderkey + strconv.Itoa(int(p.CommunityID))
+	key := KeyPostTimeZSet + ":" + strconv.Itoa(int(p.CommunityID))
 	pipeline := client.Pipeline()
 	if client.Exists(ctx, key).Val() < 1 {
 		pipeline.ZInterStore(context.Background(), key, &redis.ZStore{
@@ -70,7 +70,7 @@ func GetCommunityPostIDByInOrder(p *models.ParamPostList) ([]string, error) {
 }
 
 func getIDsFormKey(key string, limit, offset int64) ([]string, error) {
-	offset = limit * offset
+	offset = limit + offset
 	ctx := context.Background()
 	return client.ZRevRange(ctx, key, limit, offset).Result()
 }

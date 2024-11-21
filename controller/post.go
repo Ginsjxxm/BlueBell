@@ -10,6 +10,16 @@ import (
 )
 
 // CreatePostHandler 创建帖子
+// @Summary 创建帖子
+// @Description 可新建帖子
+// @Tags 帖子相关接口
+// @Accept application/json
+// @Produce application/json
+// @Param Authorization header string false "Bearer 用户令牌"
+// @Param object query _PostFirst false "查询参数"
+// @Security ApiKeyAuth
+// @Success 200 {object} controller.ResponseData
+// @Router /post [Post]
 func CreatePostHandler(c *gin.Context) {
 	//获取参数
 	p := new(models.Post)
@@ -71,8 +81,17 @@ func GetPostListHandler(c *gin.Context) {
 	ResponseSuccess(c, data)
 }
 
-// GetPostListHandler2 升级版帖子列表
-// 按照时间或者创建时间获取
+// GetPostListHandler2 升级版帖子列表接口
+// @Summary 升级版帖子列表接口
+// @Description 可按社区按时间或分数排序查询帖子列表接口
+// @Tags 帖子相关接口
+// @Accept application/json
+// @Produce application/json
+// @Param Authorization header string false "Bearer 用户令牌"
+// @Param object query models.ParamPostList false "查询参数"
+// @Security ApiKeyAuth
+// @Success 200 {object} _ResponsePostList
+// @Router /post2 [get]
 func GetPostListHandler2(c *gin.Context) {
 	//获取分页参数
 	p := &models.ParamPostList{

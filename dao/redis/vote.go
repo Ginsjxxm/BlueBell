@@ -5,6 +5,7 @@ import (
 	"errors"
 	"github.com/go-redis/redis/v8"
 	"math"
+	"strconv"
 	"time"
 )
 
@@ -62,7 +63,7 @@ func VoteForPost(userID, postID string, value float64) (err error) {
 	}
 	return nil
 }
-func CreatePost(postID uint64) (err error) {
+func CreatePost(postID uint64, communityId int64) (err error) {
 	ctx := context.Background()
 	pipeline := client.TxPipeline()
 	pipeline.ZAdd(ctx, getRedisKey(KeyPostTimeZSet), &redis.Z{
@@ -72,6 +73,11 @@ func CreatePost(postID uint64) (err error) {
 
 	//帖子
 	pipeline.ZAdd(ctx, getRedisKey(KeyPostScoreZSet), &redis.Z{
+		Score:  float64(time.Now().Unix()),
+		Member: postID,
+	})
+	cKey := getRedisKey(KeyCommunitySetPF + strconv.Itoa(int(communityId)))
+	pipeline.ZAdd(ctx, cKey, &redis.Z{
 		Score:  float64(time.Now().Unix()),
 		Member: postID,
 	})

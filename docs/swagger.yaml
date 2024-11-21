@@ -1,0 +1,173 @@
+basePath: api/v1
+definitions:
+  controller._ResponsePostList:
+    properties:
+      code:
+        $ref: '#/definitions/controller.ResCode'
+      data:
+        items:
+          $ref: '#/definitions/models.ApiPostDetail'
+        type: array
+      message:
+        type: string
+    type: object
+  controller.ResCode:
+    enum:
+    - 1000
+    - 1001
+    - 1002
+    - 1003
+    - 1004
+    - 1005
+    - 1006
+    - 1007
+    - 1008
+    type: integer
+    x-enum-varnames:
+    - CodeSuccess
+    - CodeInvalidParams
+    - CodeUserExist
+    - CodeUserNotExist
+    - CodeInvalidPassword
+    - CodeServeBusy
+    - CodeInvalidToken
+    - CodeNeedLogin
+    - CodeInvalidByID
+  controller.ResponseData:
+    properties:
+      code:
+        $ref: '#/definitions/controller.ResCode'
+      data: {}
+      msg: {}
+    type: object
+  models.ApiPostDetail:
+    properties:
+      author_name:
+        type: string
+      community:
+        $ref: '#/definitions/models.CommunityDetail'
+      post:
+        $ref: '#/definitions/models.Post'
+      vote_num:
+        type: integer
+    type: object
+  models.CommunityDetail:
+    properties:
+      createTime:
+        type: string
+      id:
+        type: integer
+      introduction:
+        type: string
+      name:
+        type: string
+    type: object
+  models.Post:
+    properties:
+      author_id:
+        example: "0"
+        type: string
+      community_id:
+        example: "0"
+        type: string
+      content:
+        type: string
+      create_time:
+        type: string
+      id:
+        example: "0"
+        type: string
+      status:
+        example: "0"
+        type: string
+      title:
+        type: string
+    required:
+    - community_id
+    - content
+    - title
+    type: object
+host: 127.0.0.1:8081/
+info:
+  contact:
+    email: 3288449152@qq.com
+    name: Admira.
+    url: http://www.swagger.io/support
+  description: BlueBell
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Bell
+  version: "1.0"
+paths:
+  /post:
+    post:
+      consumes:
+      - application/json
+      description: 可新建帖子
+      parameters:
+      - description: Bearer 用户令牌
+        in: header
+        name: Authorization
+        type: string
+      - example: "0"
+        in: query
+        name: community_id
+        required: true
+        type: string
+      - in: query
+        name: content
+        required: true
+        type: string
+      - in: query
+        name: title
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controller.ResponseData'
+      security:
+      - ApiKeyAuth: []
+      summary: 创建帖子
+      tags:
+      - 帖子相关接口
+  /post2:
+    get:
+      consumes:
+      - application/json
+      description: 可按社区按时间或分数排序查询帖子列表接口
+      parameters:
+      - description: Bearer 用户令牌
+        in: header
+        name: Authorization
+        type: string
+      - in: query
+        name: community_id
+        type: integer
+      - in: query
+        name: limit
+        type: integer
+      - in: query
+        name: offset
+        type: integer
+      - in: query
+        name: order
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controller._ResponsePostList'
+      security:
+      - ApiKeyAuth: []
+      summary: 升级版帖子列表接口
+      tags:
+      - 帖子相关接口
+swagger: "2.0"

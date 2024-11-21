@@ -2,9 +2,12 @@ package routers
 
 import (
 	"BlueBell/controller"
+	_ "BlueBell/docs"
 	"BlueBell/logger"
 	"BlueBell/middlewares"
 	"github.com/gin-gonic/gin"
+	swaggerFiles "github.com/swaggo/files"
+	gs "github.com/swaggo/gin-swagger"
 	"net/http"
 )
 
@@ -28,10 +31,11 @@ func SetupRouter(mode string) *gin.Engine {
 		v1.GET("/post/:id", controller.GetHandlerPost)
 		v1.GET("/post", controller.GetPostListHandler)
 		v1.POST("/vote", controller.PostVoteController)
-		//按照分数查找
+
 		v1.GET("/post2", controller.GetPostListHandler2)
-		v1.GET("/community/posts", controller.GetPostListHandler2)
 	}
+
+	r.GET("/swagger/*any", gs.WrapHandler(swaggerFiles.Handler))
 
 	//test
 	r.GET("/ping", middlewares.JWTAuthMiddleware(), func(c *gin.Context) {

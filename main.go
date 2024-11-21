@@ -20,6 +20,20 @@ import (
 	"time"
 )
 
+// @title Bell
+// @version 1.0
+// @description BlueBell
+// @termsOfService http://swagger.io/terms/
+
+// @contact.name Admira.
+// @contact.url http://www.swagger.io/support
+// @contact.email 3288449152@qq.com
+
+// @license.name Apache 2.0
+// @license.url http://www.apache.org/licenses/LICENSE-2.0.html
+
+// @host 127.0.0.1:8081/
+// @BasePath api/v1
 func main() {
 	//加载配置
 	if err := settings.Init(); err != nil {
