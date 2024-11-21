@@ -7,10 +7,10 @@ import (
 	"github.com/go-redis/redis/v8"
 )
 
-var rdb *redis.Client
+var client *redis.Client
 
 func Init(ctg *settings.RedisConfig) (err error) {
-	rdb := redis.NewClient(&redis.Options{
+	client = redis.NewClient(&redis.Options{
 		Addr: fmt.Sprintf("%s:%d",
 			ctg.Host,
 			ctg.Port,
@@ -18,7 +18,7 @@ func Init(ctg *settings.RedisConfig) (err error) {
 		Password: ctg.Password,
 		DB:       ctg.DB,
 	})
-	_, err = rdb.Ping(context.Background()).Result()
+	_, err = client.Ping(context.Background()).Result()
 	if err != nil {
 		return err
 	}
@@ -27,7 +27,7 @@ func Init(ctg *settings.RedisConfig) (err error) {
 }
 
 func Close() {
-	if rdb != nil {
-		rdb.Close()
+	if client != nil {
+		client.Close()
 	}
 }

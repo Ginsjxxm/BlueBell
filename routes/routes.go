@@ -27,6 +27,10 @@ func SetupRouter(mode string) *gin.Engine {
 		v1.POST("/post", controller.CreatePostHandler)
 		v1.GET("/post/:id", controller.GetHandlerPost)
 		v1.GET("/post", controller.GetPostListHandler)
+		v1.POST("/vote", controller.PostVoteController)
+		//按照分数查找
+		v1.GET("/post2", controller.GetPostListHandler2)
+		v1.GET("/community/posts", controller.GetPostListHandler2)
 	}
 
 	//test

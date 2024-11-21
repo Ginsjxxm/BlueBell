@@ -4,8 +4,8 @@ import "time"
 
 // Post 内存对其
 type Post struct {
-	ID          uint64    `json:"id,string" db:"post_id" binding:"required"`
-	AuthorID    uint64    `json:"author_id,string" db:"author_id" binding:"required"`
+	ID          uint64    `json:"id,string" db:"post_id"`
+	AuthorID    uint64    `json:"author_id,string" db:"author_id"`
 	CommunityID int64     `json:"community_id,string" db:"community_id" binding:"required"`
 	Status      int32     `json:"status,string" db:"status"`
 	Title       string    `json:"title" db:"title" binding:"required"`
@@ -15,6 +15,7 @@ type Post struct {
 
 type ApiPostDetail struct {
 	AuthorName       string `json:"author_name"`
+	VoteNum          int64  `json:"vote_num"`
 	*Post            `json:"post"`
 	*CommunityDetail `json:"community"`
 }

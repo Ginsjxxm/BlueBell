@@ -54,3 +54,6 @@ CREATE TABLE `post` (
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
+UPDATE post
+SET community_id = 4
+WHERE community_id = 2003;

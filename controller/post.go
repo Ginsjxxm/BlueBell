@@ -61,21 +61,7 @@ func GetHandlerPost(c *gin.Context) {
 // GetPostListHandler 分页请求帖子
 func GetPostListHandler(c *gin.Context) {
 	//获取分页参数
-	var (
-		limit  int64
-		offset int64
-		err    error
-	)
-	offsetStr := c.Query("offset")
-	limitStr := c.Query("limit")
-	offset, err = strconv.ParseInt(offsetStr, 10, 64)
-	if err != nil {
-		offset = 0
-	}
-	limit, err = strconv.ParseInt(limitStr, 10, 64)
-	if err != nil {
-		limit = 5
-	}
+	limit, offset := getInfo(c)
 	data, err := logic.GetPostList(offset, limit)
 	if err != nil {
 		zap.L().Error("logic.GetPostList failed", zap.Error(err))
@@ -83,4 +69,43 @@ func GetPostListHandler(c *gin.Context) {
 		return
 	}
 	ResponseSuccess(c, data)
+}
+
+// GetPostListHandler2 升级版帖子列表
+// 按照时间或者创建时间获取
+func GetPostListHandler2(c *gin.Context) {
+	//获取分页参数
+	p := &models.ParamPostList{
+		Limit:  0,
+		Offset: 5,
+		Order:  models.OrderTime,
+	}
+	err := c.ShouldBindQuery(p)
+	if err != nil {
+		zap.L().Error("logic.GetPostList2 failed", zap.Error(err))
+		ResponseError(c, CodeInvalidParams)
+		return
+	}
+	data, err := logic.GetPostListNew(p)
+	if err != nil {
+		zap.L().Error("logic.GetPostList failed", zap.Error(err))
+		ResponseError(c, CodeServeBusy)
+		return
+	}
+	ResponseSuccess(c, data)
+
+}
+
+func getInfo(c *gin.Context) (limit int64, offset int64) {
+	offsetStr := c.Query("offset")
+	limitStr := c.Query("limit")
+	offset, err := strconv.ParseInt(offsetStr, 10, 64)
+	if err != nil {
+		offset = 0
+	}
+	limit, err = strconv.ParseInt(limitStr, 10, 64)
+	if err != nil {
+		limit = 5
+	}
+	return limit, offset
 }

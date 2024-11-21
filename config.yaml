@@ -23,6 +23,6 @@ mysql:
   max_open: 200
   max_idle: 50
 redis:
-  host: 10.188.190.198
+  host: 10.188.192.47
   port: 6379
   db: 0
